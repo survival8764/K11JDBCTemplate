@@ -27,7 +27,7 @@
 			<input type="text" name="searchWord" />
 			<input type="submit" value="검색하기" />
 		</td>
-	</tr>	
+	</tr>
 	</table>	
 	</form>
 	

@@ -3,18 +3,14 @@ package springboard.utill;
 public class PagingUtil {
 
 	public static String pagingImg(
-			
-		int totalRecordCount,
-		int pageSize,
-		int blockPage,
-		int nowPage,
-		String page) {
+		int totalRecordCount, int pageSize, int blockPage, 
+			int nowPage, String page) {
 		
 		String pagingStr = "";
 		
 		//1.전체페이지 구하기
 		int totalPage = 
-		(int)(Math.ceil(((double)totalRecordCount/pageSize)));
+				(int)(Math.ceil(((double)totalRecordCount/pageSize)));
 		
 		/*2.현재페이지번호를 통해 이전 페이지블럭에
 		해당하는 페이지를 구한다.
@@ -57,6 +53,7 @@ public class PagingUtil {
 		}
 		
 		//5.다음페이지블럭 & 마지막페이지 바로가기
+		
 		if(intTemp <= totalPage) {
 			pagingStr += "<a href='"+page+"nowPage="+
 											intTemp+"'>"

@@ -51,7 +51,8 @@ public class ListCommand implements BbsCommandImpl {
 		// 게시물 수 카운트
 		int totalRecordCount = dao.getTotalCount(paramMap);
 		
-		/****************페이징처리start******************/
+/**********************************페이징처리start**********************************/
+		
 		// Environment객체를 통한 properties파일을 읽어온다.
 		int pageSize = Integer.parseInt(
 				EnvFileReader.getValue("SpringBbsInit.properties",
@@ -74,6 +75,8 @@ public class ListCommand implements BbsCommandImpl {
 		
 		paramMap.put("start", start);
 		paramMap.put("end", end);
+		
+/**********************************페이징처리end************************************/
 		
 		// 목록에 출력할 레코드 가져오기(페이지 처리 X)
 		//ArrayList<SpringBbsDTO> listRows = dao.list(paramMap);
